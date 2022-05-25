@@ -164,23 +164,24 @@
       <EmbedInteropTypes>False</EmbedInteropTypes>
     </COMReference>
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
-    <Reference Include="Autodesk.iLogic.Interfaces">
-      <HintPath>..\..\..\..\..\..\Program Files\Autodesk\Inventor 2020\Bin\Autodesk.iLogic.Interfaces.dll</HintPath>
-    </Reference>
-    <Reference Include="Autodesk.iLogic.Runtime, Version=23.40.33000.0, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="Autodesk.iLogic.Interfaces, Version=24.20.31000.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\..\Program Files\Autodesk\Inventor 2020\Bin\Autodesk.iLogic.Runtime.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\Program Files\Autodesk\Inventor 2021\Bin\Autodesk.iLogic.Interfaces.dll</HintPath>
     </Reference>
-    <Reference Include="Autodesk.iLogic.Types, Version=23.40.33000.0, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="Autodesk.iLogic.Runtime, Version=24.20.31000.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\..\Program Files\Autodesk\Inventor 2020\Bin\Autodesk.iLogic.Types.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\Program Files\Autodesk\Inventor 2021\Bin\Autodesk.iLogic.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Autodesk.iLogic.Types, Version=24.20.31000.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Program Files\Autodesk\Inventor 2021\Bin\Autodesk.iLogic.Types.dll</HintPath>
     </Reference>
     <Reference Include="Autodesk.Inventor.Interop, Version=23.0.0.0, Culture=neutral, PublicKeyToken=d84147f8b4276564, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <EmbedInteropTypes>True</EmbedInteropTypes>
-      <HintPath>..\..\..\..\..\..\Program Files\Autodesk\Inventor 2020\Bin\Public Assemblies\Autodesk.Inventor.Interop.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <HintPath>..\..\..\..\..\..\Program Files\Autodesk\Inventor 2021\Bin\Public Assemblies\Autodesk.Inventor.Interop.dll</HintPath>
+      <Private>False</Private>
     </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
