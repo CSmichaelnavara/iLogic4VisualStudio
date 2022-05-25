@@ -1,0 +1,135 @@
+﻿Imports System.Linq
+Imports System.Diagnostics
+Imports System.IO
+Imports System.Reflection
+Imports File = System.IO.File
+Imports Path = System.IO.Path
+Sub Main()
+    ' Path to directory with build
+    Dim buildDir = "D:\GIT\iLogicForVS\iLogicForVS\bin\Debug"
+
+    ' File name of compiled DLL file
+    Dim dllFileName = "iLogic4VisualStudio.dll"
+
+    'Name of the class with rule to debug
+    Dim ruleName = "iLogic4VisualStudio.SampleRule"
+
+    Dim testedRule As Object = GetTestedRule(buildDir, dllFileName, ruleName)
+    If testedRule Is Nothing Then Return
+
+    InitializeiLogicObjects(testedRule)
+
+    'Execute rule Main()
+    Logger.Info("Starting rule: {0}", ruleName)
+    Call testedRule.Main()
+End Sub
+
+Private Sub InitializeiLogicObjects(rule As Object)
+    ' Some of the variables can be initialized only in specific documnet type
+    ' If you need to use them, you need to uncomment the init lines
+
+    ' All documents
+    rule.AssetNameLanguage = Me.AssetNameLanguage
+    rule.Feature = Me.Feature
+    rule.GoExcel = Me.GoExcel
+    rule.iFeature = Me.iFeature
+    rule.iLogicForm = Me.iLogicForm
+    rule.iLogicVb = Me.iLogicVb
+    rule.InventorVb = Me.InventorVb
+    rule.iPart = Me.iPart
+    rule.iProperties = Me.iProperties
+    rule.Logger = Me.Logger
+    rule.Measure = Me.Measure
+    rule.MultiValue = Me.MultiValue
+    rule.Parameter = Me.Parameter
+    rule.RuleArguments = Me.RuleArguments
+    rule.SharedVariable = Me.SharedVariable
+    rule.SheetMetal = Me.SheetMetal
+    rule.ThisApplication = Me.ThisApplication
+    rule.ThisDoc = Me.ThisDoc
+    rule.ThisServer = Me.ThisServer
+
+    ''Drawing document only	
+    'rule.ActiveSheet = Me.ActiveSheet
+    'rule.ThisDrawing = Me.ThisDrawing
+
+    ''Assembly document only
+    'rule.Component = Me.Component
+    'rule.Components = Me.Components
+    'rule.Constraint = Me.Constraint
+    'rule.Constraints = Me.Constraints
+    'rule.iAssembly = Me.iAssembly
+    'rule.Joint = Me.Joint
+    'rule.ThisAssembly = Me.ThisAssembly
+    'rule.ThisBOM = Me.ThisBOM
+    'rule.Patterns = Me.Patterns
+
+End Sub
+
+Private Function GetTestedRule(debugVersions As String, dllFileName As String, ruleName As String) As Object
+
+    'Searching for last build
+    Dim lastBuild As String = SearchLastBuild(debugVersions, dllFileName)
+
+    'Loading of last build
+    Dim oAssembly As System.Reflection.Assembly = System.Reflection.Assembly.LoadFile(lastBuild)
+
+    'Searching for rule class
+    Dim ruleType As Type = oAssembly.GetType(ruleName, False)
+    If ruleType Is Nothing Then ruleType = GetRuleByName(oAssembly, ruleName)
+    If ruleType Is Nothing Then Return Nothing
+
+    'Create rule class instance
+    Dim testedRule As Object
+    Try
+        testedRule = oAssembly.CreateInstance(ruleType.FullName)
+    Catch ex As Exception
+        Logger.Error("Create rule instance failed{0}{1}", vbCrLf, ex.Message)
+        Return Nothing
+    End Try
+
+    Return testedRule
+End Function
+
+Private Function SearchLastBuild(buildDir As String, dllFileName As String) As String
+    buildDir = buildDir.TrimEnd("\")
+    Dim dllFullFileName = System.IO.Path.Combine(buildDir, dllFileName)
+    If Not File.Exists(dllFullFileName) Then Throw New FileNotFoundException("Dll file not found", dllFullFileName)
+
+    Dim versionInfo = FileVersionInfo.GetVersionInfo(dllFullFileName)
+
+    Dim versionDir = System.IO.Path.Combine(buildDir & "Versions", versionInfo.FileVersion)
+    Dim versionDllFullFileName = System.IO.Path.Combine(versionDir, dllFileName)
+    If File.Exists(versionDllFullFileName) Then Return versionDllFullFileName
+    Directory.CreateDirectory(versionDir)
+    CopyFilesRecursively(buildDir, versionDir)
+    Return versionDllFullFileName
+
+End Function
+
+Private Function GetRuleByName(oAssembly As System.Reflection.Assembly, ruleName As String) As Object
+    Dim foundRules As Type() = oAssembly.GetTypes().Where(Function(t) t.Name = ruleName).ToArray()
+    Select Case foundRules.Length
+        Case 0
+            Logger.Error("Rule not found '{0}'", ruleName)
+            Return Nothing
+        Case 1
+            Return foundRules(0)
+        Case Else
+            Logger.Error("Multiple rules found{0}{1}", vbCrLf, String.Join(vbCrLf, foundRules.Select(Function(t) t.FullName)))
+            Return Nothing
+    End Select
+End Function
+
+Private Sub CopyFilesRecursively(sourcePath As String, targetPath As String)
+    'Now Create all of the directories
+    For Each dirPath As String In Directory.GetDirectories(sourcePath, "*", SearchOption.AllDirectories)
+        Directory.CreateDirectory(dirPath.Replace(sourcePath, targetPath))
+    Next
+    'Copy all the files & Replaces any files with the same name
+    For Each newPath As String In Directory.GetFiles(sourcePath, "*.*", SearchOption.AllDirectories)
+        File.Copy(newPath, newPath.Replace(sourcePath, targetPath), True)
+    Next
+End Sub
+
+

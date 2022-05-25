@@ -1,0 +1,30 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32002.261
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "iLogic4VisualStudio", "iLogic4VisualStudio\iLogic4VisualStudio.vbproj", "{E7795188-29BE-4C58-9C7A-FD20E52F66C3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{9C251D93-B067-47F2-81D5-2E13FC740584}"
+	ProjectSection(SolutionItems) = preProject
+		Readme.md = Readme.md
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug 2016|Any CPU = Debug 2016|Any CPU
+		Debug|Any CPU = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E7795188-29BE-4C58-9C7A-FD20E52F66C3}.Debug 2016|Any CPU.ActiveCfg = Debug 2016|Any CPU
+		{E7795188-29BE-4C58-9C7A-FD20E52F66C3}.Debug 2016|Any CPU.Build.0 = Debug 2016|Any CPU
+		{E7795188-29BE-4C58-9C7A-FD20E52F66C3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E7795188-29BE-4C58-9C7A-FD20E52F66C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {51169A62-3A0F-4530-A579-F355E3DCA093}
+	EndGlobalSection
+EndGlobal
