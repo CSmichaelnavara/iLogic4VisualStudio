@@ -167,20 +167,20 @@
   <ItemGroup />
   <ItemGroup>
     <Reference Include="Autodesk.iLogic.Interfaces">
-      <HintPath>C:\Program Files\Autodesk\Inventor 2019\Bin\Autodesk.iLogic.Interfaces.dll</HintPath>
-      <Private>False</Private>
+      <HintPath>..\..\..\..\..\..\Program Files\Autodesk\Inventor 2020\Bin\Autodesk.iLogic.Interfaces.dll</HintPath>
     </Reference>
-    <Reference Include="Autodesk.iLogic.Runtime">
-      <HintPath>C:\Program Files\Autodesk\Inventor 2019\Bin\Autodesk.iLogic.Runtime.dll</HintPath>
-    </Reference>
-    <Reference Include="Autodesk.iLogic.Types">
-      <HintPath>C:\Program Files\Autodesk\Inventor 2019\Bin\Autodesk.iLogic.Types.dll</HintPath>
-    </Reference>
-    <Reference Include="Autodesk.Inventor.Interop, Version=25.1.0.0, Culture=neutral, PublicKeyToken=d84147f8b4276564, processorArchitecture=MSIL">
+    <Reference Include="Autodesk.iLogic.Runtime, Version=23.40.33000.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <EmbedInteropTypes>False</EmbedInteropTypes>
-      <HintPath>ref\Autodesk.Inventor.Interop.dll</HintPath>
-      <Private>False</Private>
+      <HintPath>..\..\..\..\..\..\Program Files\Autodesk\Inventor 2020\Bin\Autodesk.iLogic.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Autodesk.iLogic.Types, Version=23.40.33000.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Program Files\Autodesk\Inventor 2020\Bin\Autodesk.iLogic.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="Autodesk.Inventor.Interop, Version=23.0.0.0, Culture=neutral, PublicKeyToken=d84147f8b4276564, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>..\..\..\..\..\..\Program Files\Autodesk\Inventor 2020\Bin\Public Assemblies\Autodesk.Inventor.Interop.dll</HintPath>
     </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
