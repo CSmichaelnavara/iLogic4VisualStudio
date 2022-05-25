@@ -158,6 +158,9 @@ Public Class ShowMessage
 End Class
 ```
 
+![RuleBasic.gif](doc/RuleBasic.gif)
+
+
 ### Debug rule
 Before you can debug your code, you need to build this project.
 Then you open Inventor and verify you have set correct rule name in DebuggerRule.iLogicVb 
@@ -168,6 +171,8 @@ Then you open Inventor and verify you have set correct rule name in DebuggerRule
 You can attach Visual Studio debugger to Inventor process and then you can set break points and other powerful debuging tools of VS.
 
 Start the ```DebuggerRule``` to execute the code. 
+
+![Debugging.gif](doc/Debugging.gif)
 
 ### Extract iLogic code
 In this project the code is written as full VB.NET class. For iLogic you need only part of this source code.
