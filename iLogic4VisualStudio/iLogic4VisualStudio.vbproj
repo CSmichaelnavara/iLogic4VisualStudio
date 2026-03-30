@@ -165,22 +165,19 @@
     </COMReference>
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="Autodesk.iLogic.Interfaces, Version=26.20.28700.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\..\Program Files\Autodesk\Inventor 2023\Bin\Autodesk.iLogic.Interfaces.dll</HintPath>
+    <Reference Include="Autodesk.iLogic.Interfaces">
+      <HintPath>C:\Program Files\Autodesk\Inventor 2024\Bin\Autodesk.iLogic.Interfaces.dll</HintPath>
     </Reference>
-    <Reference Include="Autodesk.iLogic.Runtime, Version=26.20.28700.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\..\Program Files\Autodesk\Inventor 2023\Bin\Autodesk.iLogic.Runtime.dll</HintPath>
+    <Reference Include="Autodesk.iLogic.Runtime">
+      <HintPath>C:\Program Files\Autodesk\Inventor 2024\Bin\Autodesk.iLogic.Runtime.dll</HintPath>
     </Reference>
-    <Reference Include="Autodesk.iLogic.Types, Version=26.20.28700.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\..\Program Files\Autodesk\Inventor 2023\Bin\Autodesk.iLogic.Types.dll</HintPath>
+    <Reference Include="Autodesk.iLogic.Types">
+      <HintPath>C:\Program Files\Autodesk\Inventor 2024\Bin\Autodesk.iLogic.Types.dll</HintPath>
     </Reference>
     <Reference Include="Autodesk.Inventor.Interop, Version=23.0.0.0, Culture=neutral, PublicKeyToken=d84147f8b4276564, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <EmbedInteropTypes>False</EmbedInteropTypes>
-      <HintPath>..\..\..\..\..\..\Program Files\Autodesk\Inventor 2023\Bin\Public Assemblies\Autodesk.Inventor.Interop.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\Program Files\Autodesk\Inventor 2024\Bin\Public Assemblies\Autodesk.Inventor.Interop.dll</HintPath>
       <Private>False</Private>
     </Reference>
   </ItemGroup>
