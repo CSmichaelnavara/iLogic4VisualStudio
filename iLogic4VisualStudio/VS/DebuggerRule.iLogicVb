@@ -1,4 +1,5 @@
-﻿Imports System.Linq
+﻿AddReference "System.Diagnostics.FileVersionInfo"
+Imports System.Linq
 Imports System.Diagnostics
 Imports System.IO
 Imports System.Reflection
