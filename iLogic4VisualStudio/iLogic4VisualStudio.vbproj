@@ -19,16 +19,16 @@
 
 	<ItemGroup>
 		<Reference Include="Autodesk.iLogic.Interfaces">
-			<HintPath>C:\Program Files\Autodesk\Inventor 2025\Bin\Autodesk.iLogic.Interfaces.dll</HintPath>
+			<HintPath>C:\Program Files\Autodesk\Inventor 2026\Bin\Autodesk.iLogic.Interfaces.dll</HintPath>
 		</Reference>
 		<Reference Include="Autodesk.iLogic.Runtime">
-			<HintPath>C:\Program Files\Autodesk\Inventor 2025\Bin\Autodesk.iLogic.Runtime.dll</HintPath>
+			<HintPath>C:\Program Files\Autodesk\Inventor 2026\Bin\Autodesk.iLogic.Runtime.dll</HintPath>
 		</Reference>
 		<Reference Include="Autodesk.iLogic.Types">
-			<HintPath>C:\Program Files\Autodesk\Inventor 2025\Bin\Autodesk.iLogic.Types.dll</HintPath>
+			<HintPath>C:\Program Files\Autodesk\Inventor 2026\Bin\Autodesk.iLogic.Types.dll</HintPath>
 		</Reference>
 		<Reference Include="Autodesk.Inventor.Interop">
-			<HintPath>C:\Program Files\Autodesk\Inventor 2025\Bin\Public Assemblies\Autodesk.Inventor.Interop.dll</HintPath>
+			<HintPath>C:\Program Files\Autodesk\Inventor 2026\Bin\Public Assemblies\Autodesk.Inventor.Interop.dll</HintPath>
 		</Reference>
 	</ItemGroup>
 
