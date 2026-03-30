@@ -1,6 +1,8 @@
 # iLogic for Visual Studio
 This project is designed for Autodesk Inventor iLogic code creation and debugging.
 With minimal updates it works for all actual versions of Inventor.
+Actually supported versions are 2020 - 2027
+
 
 ## Requirements
 1) Default configuration assumes the Autodesk Inventor 2020 
@@ -9,9 +11,17 @@ Otherwise you need to update [Project references](#project-references) for Inven
 
 2) Visual Studio must be installed
 
+> **Note:** 
+Latest update is for Inventor 2027 (NET 8) which can be compiled using Visual Studio 2022.
+Update to NET 10 requires [Visual Studio 2026](https://learn.microsoft.com/en-us/dotnet/core/porting/versioning-sdk-msbuild-vs#targeting-and-support-rules)
+
+
 
 ## Setup
 Download or clone repository to your local computer. Then open it in Visual Studio.
+
+See [Branches](https://github.com/CSmichaelnavara/iLogic4VisualStudio/branches/all) or [Tags](https://github.com/CSmichaelnavara/iLogic4VisualStudio/tags)
+for appropriate version according to Inventor version.
 
 ### Project references
 This project uses iLogic DLL files from its default location. 
