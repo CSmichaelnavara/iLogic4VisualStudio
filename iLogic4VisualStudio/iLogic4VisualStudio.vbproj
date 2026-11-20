@@ -2,7 +2,7 @@
 
 	<PropertyGroup>
 		<RootNamespace>iLogic4VisualStudio</RootNamespace>
-		<TargetFramework>net8.0-windows</TargetFramework>
+		<TargetFramework>net10.0-windows</TargetFramework>
 		<ImportedNamespaces>Autodesk.iLogic.Interfaces=False,Inventor=False,Microsoft.VisualBasic=True,System=True,System.Collections=True,System.Collections.Generic=True,System.Diagnostics=True,System.Linq=True,System.Xml.Linq=True,System.Threading.Tasks=True,iLogic4VisualStudio=True</ImportedNamespaces>
 
 		<UseWindowsForms>true</UseWindowsForms>
@@ -19,16 +19,16 @@
 
 	<ItemGroup>
 		<Reference Include="Autodesk.iLogic.Interfaces">
-			<HintPath>C:\Program Files\Autodesk\Inventor 2026\Bin\Autodesk.iLogic.Interfaces.dll</HintPath>
+			<HintPath>C:\Program Files\Autodesk\Inventor 2027\Bin\Autodesk.iLogic.Interfaces.dll</HintPath>
 		</Reference>
 		<Reference Include="Autodesk.iLogic.Runtime">
-			<HintPath>C:\Program Files\Autodesk\Inventor 2026\Bin\Autodesk.iLogic.Runtime.dll</HintPath>
+			<HintPath>C:\Program Files\Autodesk\Inventor 2027\Bin\Autodesk.iLogic.Runtime.dll</HintPath>
 		</Reference>
 		<Reference Include="Autodesk.iLogic.Types">
-			<HintPath>C:\Program Files\Autodesk\Inventor 2026\Bin\Autodesk.iLogic.Types.dll</HintPath>
+			<HintPath>C:\Program Files\Autodesk\Inventor 2027\Bin\Autodesk.iLogic.Types.dll</HintPath>
 		</Reference>
 		<Reference Include="Autodesk.Inventor.Interop">
-			<HintPath>C:\Program Files\Autodesk\Inventor 2026\Bin\Public Assemblies\Autodesk.Inventor.Interop.dll</HintPath>
+			<HintPath>C:\Program Files\Autodesk\Inventor 2027\Bin\Public Assemblies\Autodesk.Inventor.Interop.dll</HintPath>
 		</Reference>
 	</ItemGroup>
 
