@@ -2,7 +2,7 @@
 
 	<PropertyGroup>
 		<RootNamespace>iLogic4VisualStudio</RootNamespace>
-		<TargetFramework>net8.0-windows</TargetFramework>
+		<TargetFramework>net10.0-windows</TargetFramework>
 		<ImportedNamespaces>Autodesk.iLogic.Interfaces=False,Inventor=False,Microsoft.VisualBasic=True,System=True,System.Collections=True,System.Collections.Generic=True,System.Diagnostics=True,System.Linq=True,System.Xml.Linq=True,System.Threading.Tasks=True,iLogic4VisualStudio=True</ImportedNamespaces>
 
 		<UseWindowsForms>true</UseWindowsForms>
